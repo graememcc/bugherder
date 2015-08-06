@@ -37,15 +37,13 @@
 
         <div class="hiddenContent hideAll" id="loading"></div>
 
-        <div class="hiddenContent hideAll" id="getCset">
-          <p id="formText">
+        <form class="hiddenContent hideAll" id="csetForm">
+          <label id="formText" for="changeset">
             Please enter the URL or hex changeset ID of a changeset from the merge:
-          </p>
-          <form id="csetForm">
-            <input type="text" id="changeset" autofocus required />
-            <input type="submit" value="Submit" id="revSubmit" />
-          </form>
-        </div>
+          </label>
+          <input type="text" id="changeset" autofocus required />
+          <input type="submit" value="Submit" id="revSubmit" />
+        </form>
 
         <div class="hiddenContent hideAll" id="detail"></div>
 

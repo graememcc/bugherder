@@ -313,7 +313,7 @@ var UI = {
     if (typeof listener == 'function')
       $('#csetForm').one('submit', listener);
 
-    this.show('getCset');
+    this.show('csetForm');
     $('#changeset').focus();
   },
 
