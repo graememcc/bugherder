@@ -348,7 +348,7 @@ div.ctr {
   position: fixed;
 }
 
-#headline, #helpText {
+#helpText {
   margin: 0;
   padding: 0;
 }

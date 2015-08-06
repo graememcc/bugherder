@@ -22,10 +22,11 @@ var DebugUI = {
 
 
   makeSection: function DebugUI_makeSection(title, pushes, debug) {
-    var html = '<h2>' + title;
+    var html = '<section><h2>' + title;
     html += ' (' + pushes.length + ' changesets)';
     html += '</h2>';
     html += pushes.map(this.makePushHTML, this).join('');
+    html += '</section>';
     return html;
   },
 

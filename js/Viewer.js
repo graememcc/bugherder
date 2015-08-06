@@ -596,15 +596,13 @@ var Viewer = {
 
 
   makeHeadlineHTML: function viewer_makeHeadlineHTML(headline) {
-    var html = '<div class="grid-12" id="headline">';
-    html += '<h2>' + headline + '</h2>';
-    html += '</div>';
+    var html = '<h2>' + headline + '</h2>';
     return html;
   },
 
 
   makeHelpHTML: function viewer_buildHelp(helpText) {
-    var html = '<p class="grid-12" id="helpText">';
+    var html = '<p id="helpText">';
     html += helpText;
     html += '</p>';
     return html;
