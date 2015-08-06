@@ -77,10 +77,10 @@
           <div id="abTitle" class="modalTitle">Add bug</div>
           <div id="abContent" class="modalContent">
             <form id="addBugForm">
-              <p>
-               Enter the bug number you wish to add:<br />
+              <label for="loadBug">
+                 Enter the bug number you wish to add:
+              </label>
               <input type="text" name="Bug number" id="loadBug" required />
-              </p>
               <div class="divRight">
                 <input type="submit" value="Add"/>
                 <button id="abCancel">Cancel</button>
@@ -93,10 +93,10 @@
           <div id="cbTitle" class="modalTitle">Change bug</div>
           <div id="cbContent" class="modalContent">
             <form id="changeBugForm">
-              <p>
-               Enter a new bug number:<br />
+              <label for="changeBug">
+                Enter a new bug number:
+              </label>
               <input type="text" name="Bug number" id="changeBug" required />
-              </p>
               <div class="divRight">
                 <input type="submit" value="Change"/>
                 <button id="cbCancel">Cancel</button>
@@ -109,8 +109,9 @@
           <div id="exTitle" class="modalTitle">Add explanation for backout</div>
           <div id="exContent" class="modalContent">
             <form id="explanationForm">
-              <p>
-               Enter explanatory text for this backout:<br />
+              <label for="explanation">
+                 Enter explanatory text for this backout:
+              </label>
               <textarea name="Bug number" id="explanation"></textarea><br />
               <label for="useForAll">
                 <input type="checkbox" id="useForAll" checked="checked" />
@@ -129,10 +130,11 @@
           <div id="crTitle" class="modalTitle">Enter your Bugzilla credentials</div>
           <div id="crContent" class="modalContent">
             <form id="credentialsForm">
-              <p>Please provide your bugzilla login:<br />
-              Username: <input type="email" name="username" id="username" required /><br />
-              Password: <input type="password" name="password" id="password" required />
-              </p>
+              <p>Please provide your bugzilla login:</p>
+              <label class="inlineLabel" for="username">Username:</label>
+              <input type="email" name="username" id="username" required /><br />
+              <label class="inlineLabel" for="password">Password:</label>
+              <input type="password" name="password" id="password" required />
               <div class="divRight">
                 <input type="submit" value="Submit"/>
                 <button id="crCancel">Cancel</button>

@@ -414,8 +414,9 @@ var Viewer = {
 
 
   makeCommentHTML: function viewer_makeCommentHTML(cset, index, id) {
-    var html = 'Comment: ';
-    html += '<textarea class="comment" rows="3" cols="60" id="' + this.getCommentTextAreaID(cset, id);
+    var textareaID = this.getCommentTextAreaID(cset, id);
+    var html = '<label for="' + textareaID + '">Comment:</label>';
+    html += '<textarea class="comment" rows="3" cols="60" id="' + textareaID;
     html += '" ' + this.makeDataHTML(index, id);
     if (!this.step.canComment(index, id))
       html += ' disabled="true"';
@@ -469,7 +470,8 @@ var Viewer = {
       html += "<em>Unable to load bug " + id + " - security bug?</em>";
     html += '</div>'
     if (bug) {
-      html += '       <div class="grid-6 whiteboard">Whiteboard:';
+      html += '       <div class="grid-6 whiteboard">';
+      html += '<label for="' + this.getWhiteboardID(cset, id) + '">Whiteboard:</label>';
       html += this.makeWhiteboardHTML(cset, index, id);
       html += '       </div>';
     } else
@@ -480,19 +482,21 @@ var Viewer = {
     else
       html += '<br>';
     html += '<span class="afterWhiteboard">';
-    html += 'Comment: ';
+    html += '<label class="inlineLabel" for="' + this.getCommentCheckID(cset, id) + '">Comment: </label>';
     html += this.makeCheckboxHTML(cset, index, id, 'comment');
-    html += ' Resolve: ';
+    html += ' <label class="inlineLabel" for="' + this.getResolveCheckID(cset, id) + '">Resolve: </label>';
     html += this.makeCheckboxHTML(cset, index, id, 'resolve');
     html += '</span>';
     if (this.step.canReopen(id)) {
-      html += '<br><span class="afterWhiteboard">Reopen: ';
+      html += '<br><span class="afterWhiteboard">';
+      html += '<label class="inlineLabel" for="' + this.getReopenCheckID(cset, id) + '">Reopen: </label>';
       html += this.makeCheckboxHTML(cset, index, id, 'reopen');
       html += '</span>';
     } else
       html += '<br>';
     if (bug && bug.canSetTestsuite) {
-      html += '<span class="afterWhiteboard">In-testsuite: ';
+      html += '<span class="afterWhiteboard">';
+      html += '<label class="inlineLabel" for="' + this.getTestsuiteID(cset, id) + '">In-testsuite: </label>';
       html += this.makeTestsuiteHTML(cset, index, id);
       html += '</span><br>';
     } else

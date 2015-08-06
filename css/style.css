@@ -43,6 +43,10 @@ button {
   font-size: smaller;
 }
 
+label:not(.inlineLabel) {
+  display: block;
+}
+
 textarea {
   font-family: monospace;
   font-size: medium;
@@ -380,7 +384,6 @@ footer > div {
 }
 
 #formText {
-  display: block;
   margin-top: 1em;
   margin-bottom: 1.5em;
 }
