@@ -27,6 +27,10 @@ h1 {
   font-size: 300%;
 }
 
+h2 {
+  font-size: 1.5em;
+}
+
 aside {
   font-size: medium;
   font-style: italic;

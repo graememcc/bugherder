@@ -22,7 +22,7 @@ var Remapper = {
 
   makeHTMLForOptions: function rm_makeHTMLForOptions() {
    var html = '<hr>';
-   html += '<div class="grid-12"><h3>Other options:</h3></div>'
+   html += '<div class="grid-12"><h2>Other options:</h2></div>'
    html += '<div class="grid-12">Display an alert after fetching last_change_time (to allow you to mid-air the change)';
    html += '<input type="checkbox" id="midair"></div>';
    html += '<div class="grid-12">Set bug statuses to NEW (to allow you testing of bug resolution)';

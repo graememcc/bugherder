@@ -597,7 +597,7 @@ var Viewer = {
 
   makeHeadlineHTML: function viewer_makeHeadlineHTML(headline) {
     var html = '<div class="grid-12" id="headline">';
-    html += '<h3>' + headline + '</h3>';
+    html += '<h2>' + headline + '</h2>';
     html += '</div>';
     return html;
   },

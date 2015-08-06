@@ -119,7 +119,7 @@ var Summary = {
     if (secHTML != '')
       $('#viewerOutput').append(secHTML + '<hr>');
 
-    $('#viewerOutput').append('<div class="ctr"><h3 class="summaryHeading">Summary of activity</h3></div>');
+    $('#viewerOutput').append('<div class="ctr"><h2 class="summaryHeading">Summary of activity</h2></div>');
 
     steps.forEach(function step_viewSummaryMaker(step){
       $('#viewerOutput').append(this.makeSummaryForStep(step));
