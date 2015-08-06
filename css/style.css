@@ -47,6 +47,12 @@ label:not(.inlineLabel) {
   display: block;
 }
 
+noscript {
+  text-align: center;
+  z-index: 50;
+  color: red;
+}
+
 textarea {
   font-family: monospace;
   font-size: medium;
@@ -200,7 +206,7 @@ progress {
   margin: 10px;
 }
 
-.modal {
+.modal, noscript {
   position: fixed;
   top: 50%;
   left: 50%;
