@@ -126,15 +126,15 @@ var UI = {
     if (e.metaKey || e.altKey || e.ctrlKey || e.which != 27)
       return true;
 
-    e.preventDefault(); 
+    e.preventDefault();
     if (UI.modalForm)
       $(UI.modalForm).unbind('submit', UI.onModalConfirm);
     if (UI.cancelButton)
       $(UI.cancelButton).unbind('click', UI.onModalCancel);
-    $(document).unbind('keydown', UI.onModalKey); 
+    $(document).unbind('keydown', UI.onModalKey);
     UI.hideModalForm();
     if (UI.modalCancelAction)
-      UI.modalCancelAction(); 
+      UI.modalCancelAction();
   },
 
 
@@ -145,7 +145,7 @@ var UI = {
       $(UI.modalForm).unbind('submit', UI.onModalConfirm);
     UI.hideModalForm();
     if (UI.modalCancelAction)
-      UI.modalCancelAction(); 
+      UI.modalCancelAction();
   },
 
 
@@ -153,7 +153,7 @@ var UI = {
     e.preventDefault();
     if (UI.cancelButton) {
       $(UI.cancelButton).unbind('click', UI.onModalCancel);
-      $(document).unbind('keydown', UI.onModalKey); 
+      $(document).unbind('keydown', UI.onModalKey);
     }
     UI.hideModalForm();
     if (UI.modalSubmitAction)
@@ -284,7 +284,7 @@ var UI = {
     if (e.metaKey || e.altKey || e.ctrlKey || e.which != 27)
       return true;
 
-    e.preventDefault(); 
+    e.preventDefault();
     $('#mmOK').click();
   },
 

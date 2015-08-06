@@ -15,7 +15,7 @@ var BugData = {
     this.loadCallback = loadCallback;
     this.errorCallback = errorCallback;
     this.checkComments = checkComments;
-    this.loadMore();    
+    this.loadMore();
   },
 
 
@@ -68,7 +68,7 @@ var BugData = {
       bug.resolution = UI.htmlEncode(bugObj.resolution);
     else
       bug.resolution = '';
-    
+
     if (bugObj.whiteboard)
       bug.whiteboard = bugObj.whiteboard;
     else
@@ -116,7 +116,7 @@ var BugData = {
       for (var i = 0; i < bugObj.flags.length; i++) {
         var f = bugObj.flags[i];
         if (f.name == 'in-testsuite' && f.type_id == ConfigurationData.testsuiteFlagID) {
-          bug.intestsuite = f.status; 
+          bug.intestsuite = f.status;
           bug.testsuiteFlagID = f.id;
           break;
         }

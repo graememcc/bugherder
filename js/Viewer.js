@@ -119,7 +119,7 @@ var Viewer = {
     var expandThis = currentText == 'View comment';
     $('#' + this.getCommentID(cset, bug)).toggle(expandThis);
     target.textContent = expandThis ? 'Hide comment' : 'View comment';
-    
+
     // Update 'expand all' button text
     var shouldExpand = false;
     if (expandThis) {
@@ -162,7 +162,7 @@ var Viewer = {
 
 
   onWhiteboardInput: function viewer_onWhiteboardInput(index, bug, target) {
-    $('.' + bug + 'whiteboard').val(target.value); 
+    $('.' + bug + 'whiteboard').val(target.value);
     ViewerController.onWhiteboardInput(index, bug, target.value);
   },
 
@@ -519,7 +519,6 @@ var Viewer = {
     html += '    </div>';
     return html;
   },
-
 
 
   makeHTMLForChangeset: function viewer_makeHTMLForChangeset(index, classToAdd) {

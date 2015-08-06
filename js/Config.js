@@ -278,7 +278,7 @@ Config.bugNumberREs = [Config.bugRE1, Config.bugRE2, Config.bugRE3,
 (function () {
   var base = Config.hgBaseURL;
   for (var treeName in Config.treeInfo) {
-    var repo = Config.treeInfo[treeName].repo; 
+    var repo = Config.treeInfo[treeName].repo;
     Config.treeInfo[treeName]['hgURL'] = base + repo + '/';
     Config.treeInfo[treeName]['hgRevURL'] = base + repo + '/rev/';
     Config.treeInfo[treeName]['hgPushlogURL'] = base + repo + '/pushloghtml?changeset=';

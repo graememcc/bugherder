@@ -178,7 +178,7 @@ Step.prototype.createBug = function Step_createBug(bugID, info) {
         bug.assigned_to = {name: assignee};
     }
 
-    // Set in-testsuite if possible 
+    // Set in-testsuite if possible
     if (BugData.bugs[bugID] && info.canSetTestsuite && info.intestsuite != BugData.bugs[bugID].intestsuite) {
       bug.flags = [{name: 'in-testsuite',
                     setter: {email: Step.username},
@@ -477,7 +477,7 @@ Step.prototype.checkShouldSetStatus = function Step_checkShouldSetStatus(bugID) 
 
   var info = this.bugInfo[bugID];
   if (!info.canSetStatus) {
-    info.shouldSetStatus = false; 
+    info.shouldSetStatus = false;
     return;
   }
 
@@ -550,7 +550,7 @@ Step.prototype.attachBugToCset = function Step_attachBugToCset(index, bugID) {
     if (Config.treeName != 'mozilla-central' && Config.treeName != 'comm-central') {
       this.bugInfo[bugID].canResolve = false;
       this.bugInfo[bugID].shouldResolve = false;
-       
+
     }
 
     // Handle backouts when safe to do so
@@ -594,7 +594,7 @@ Step.prototype.attachBugToCset = function Step_attachBugToCset(index, bugID) {
     attached.canComment = !hasThisComment;
   } else if (bug && bug.comments === undefined)
     attached.canComment = true;
-  else 
+  else
     attached.canComment = false;
 
   if (!attached.canComment)
