@@ -561,9 +561,8 @@ var Viewer = {
 
 
   makeBackoutBannerHTML: function viewer_makeBackoutBannerHTML() {
-    var html = '<div class="backoutbanner ctr" id="';
-    html += '">BACKED OUT BY</div>';
-   return html;
+    var html = '<div class="backoutbanner ctr">BACKED OUT BY</div>';
+    return html;
   },
 
 
