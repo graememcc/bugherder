@@ -48,6 +48,13 @@ textarea {
   font-size: medium;
 }
 
+main {
+  padding-bottom: 60px;
+
+  /* For versions of IE that don't understand the main element */
+  display: block;
+}
+
 table {
   border-collapse: collapse;
 }
@@ -286,10 +293,6 @@ progress {
 
 div.ctr {
   z-index: 5;
-}
-
-.grids {
-  padding-bottom: 60px;
 }
 
 .subwarn {
