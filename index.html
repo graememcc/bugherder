@@ -39,7 +39,7 @@
             Please enter the URL or hex changeset ID of a changeset from the merge:
           </p>
           <form id="csetForm">
-            <input type="text" id="changeset" autofocus />
+            <input type="text" id="changeset" autofocus required />
             <input type="submit" value="Submit" id="revSubmit" />
           </form>
         </div>
@@ -77,7 +77,7 @@
           <form id="addBugForm">
             <p>
              Enter the bug number you wish to add:<br />
-            <input type="text" name="Bug number" id="loadBug" />
+            <input type="text" name="Bug number" id="loadBug" required />
             </p>
             <div class="divRight">
               <input type="submit" value="Add"/>
@@ -93,7 +93,7 @@
           <form id="changeBugForm">
             <p>
              Enter a new bug number:<br />
-            <input type="text" name="Bug number" id="changeBug" />
+            <input type="text" name="Bug number" id="changeBug" required />
             </p>
             <div class="divRight">
               <input type="submit" value="Change"/>
@@ -128,8 +128,8 @@
         <div id="crContent" class="modalContent">
           <form id="credentialsForm">
             <p>Please provide your bugzilla login:<br />
-            Username: <input type="email" name="username" id="username" /><br />
-            Password: <input type="password" name="password" id="password" />
+            Username: <input type="email" name="username" id="username" required /><br />
+            Password: <input type="password" name="password" id="password" required />
             </p>
             <div class="divRight">
               <input type="submit" value="Submit"/>
