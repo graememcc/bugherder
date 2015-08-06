@@ -342,7 +342,7 @@ var Viewer = {
     html += '" class="milestone ' + id + 'Milestone"';
     html += ' ' + this.makeDataHTML(index, id);
     if (!this.step.canResolve(id) || !this.step.shouldResolve(id) || !this.step.canSetMilestone(id))
-      html += ' disabled="true"';
+      html += ' disabled="disabled"';
     html += '>';
     var product = BugData.bugs[id].product;
     var milestones = ConfigurationData.milestones[product].values;
@@ -419,7 +419,7 @@ var Viewer = {
     html += '<textarea class="comment" rows="3" cols="60" id="' + textareaID;
     html += '" ' + this.makeDataHTML(index, id);
     if (!this.step.canComment(index, id))
-      html += ' disabled="true"';
+      html += ' disabled="disabled"';
     html += '>';
     html += this.step.getComment(index, id);
     html += '</textarea>';
