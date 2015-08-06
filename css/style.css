@@ -196,6 +196,10 @@ progress {
   display: none;
 }
 
+.margin10 {
+  margin: 10px;
+}
+
 .modal {
   position: fixed;
   top: 50%;
@@ -303,20 +307,8 @@ div.ctr {
   color: red;
 }
 
-.prevButton {
-  margin: 10px;
-}
-
-.nextButton {
-  margin: 10px;
-}
-
 .summaryHeading {
   text-decoration: underline;
-}
-
-#errors {
-  margin: 10px;
 }
 
 #errorText {

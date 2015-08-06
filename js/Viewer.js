@@ -569,11 +569,11 @@ var Viewer = {
 
   makeButtonHTML: function viewer_makeButtonHTML(prevLabel, nextLabel) {
     var html = '<div class="grid-4">';
-    html += '  <button type="button" class="prevButton">' + prevLabel + '</button>';
+    html += '  <button type="button" class="prevButton margin10">' + prevLabel + '</button>';
     html += '</div>';
     html += '<div class="grid-4"></div>';
     html += '<div class="grid-4 divRight">';
-    html += '  <button type="button" class="nextButton">' + nextLabel + '</button>';
+    html += '  <button type="button" class="nextButton margin10">' + nextLabel + '</button>';
     html += '</div>'
     return html;
   },
