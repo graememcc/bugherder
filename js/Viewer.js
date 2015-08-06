@@ -602,9 +602,9 @@ var Viewer = {
 
 
   makeHelpHTML: function viewer_buildHelp(helpText) {
-    var html = '<p id="helpText">';
+    var html = '<div id="helpText">';
     html += helpText;
-    html += '</p>';
+    html += '</div>';
     return html;
   },
 

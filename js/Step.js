@@ -918,7 +918,7 @@ Step.prototype.constructTextFor = function Step_constructTextFor(arr, postText, 
 
   if (arr.length > 0) {
     var len = arr.length;
-    text += '<br>- ';
+    text += '<li>';
     if (len <= 3 || expandAll) {
       if (len == 1)
         text += 'Bug ' + UI.linkifyBug(arr[0]);
@@ -938,6 +938,7 @@ Step.prototype.constructTextFor = function Step_constructTextFor(arr, postText, 
     else
       text += ' ' + verb.plural;
     text += postText;
+    text += '</li>';
   }
 
   return text;
@@ -966,7 +967,7 @@ Step.prototype.getAdditionalHelpText = function Step_getAdditionalHelpText() {
 
   if (this.multiBugs.length > 0 || this.leaveOpenBugs.length > 0 ||
       this.securityBugs.length > 0)
-    text += '<br>';
+    text += '<ul>';
 
   if (this.multiBugs.length > 0)
     text += this.constructTextFor(this.multiBugs, multiPost);
@@ -1023,14 +1024,21 @@ Step.prototype.getHeading = function Step_getHeading(addMax) {
 Step.prototype.getHelpText = function Step_getHelpText() {
   var helpText = '';
   if (this.name in Step.helpTexts)
-    helpText = Step.helpTexts[this.name];
+    helpText = '<p>' + Step.helpTexts[this.name] + '</p>';
   helpText += this.getAdditionalHelpText();
 
-  if (this.statusChangeBugs.length > 0 && Config.treeInfo[Config.treeName].unconditionalFlag)
-    helpText += '<br>- Submitted bugs will have ' + bugherder.statusFlag + ' set to "fixed"';
+  var listOpened = helpText.indexOf('<ul>') !== -1;
+  var pre = (listOpened ? '' : '<ul>') + '<li>';
+  if (this.statusChangeBugs.length > 0 && Config.treeInfo[Config.treeName].unconditionalFlag) {
+    helpText += pre + 'Submitted bugs will have ' + bugherder.statusFlag + ' set to "fixed"</li>';
+    listOpened = true;
+  }
+  if (listOpened)
+    helpText += '</ul>';
 
   if (Step.remaps && 'items' in Step.remaps && Step.remaps.items > 0)
     helpText += '<br><strong>Note: You are in debug mode. Only remap bugs will be submitted, and will be submitted to landfill.bugzilla.org!</strong>';
+
   return helpText;
 };
 

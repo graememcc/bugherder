@@ -353,6 +353,10 @@ div.ctr {
   padding: 0;
 }
 
+#helpText > ul {
+  list-style-type: '- ';
+}
+
 #explanation {
   width: 100%;
 }
