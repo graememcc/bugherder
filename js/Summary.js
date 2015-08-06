@@ -74,12 +74,12 @@ var Summary = {
        if (steps[i].hasSecurityBugs()) {
          sechtml += '<li>'+steps[i].getHeading(false) + '<br>';
          var sb = steps[i].getSecurityBugs();
-         sechtml += '<table><tr><td>Changeset</td><td>Link</td><td>Bug</td></tr>';
+         sechtml += '<table><thead><th>Changeset</th><th>Link</th><th>Bug</th></thead><tbody>';
          for (var j = 0; j < sb.length; j++) {
            sechtml += '<tr><td>' + sb[j].cset + '</td><td>' + UI.linkifyRevURL(sb[j].link);
            sechtml += '</td><td>' + UI.linkifyBug(sb[j].bug) + '</td></tr>';
          }
-         sechtml += '</table>';
+         sechtml += '</tbody></table>';
       }
     }
 
