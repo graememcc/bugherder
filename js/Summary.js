@@ -62,7 +62,7 @@ var Summary = {
     if (subhtml == '')
       return subhtml;
 
-    var html = '<p><span class="subwarn">WARNING: </span>The following steps seem to have changes that could be sent to Bugzilla,';
+    var html = '<p class="clear"><span class="subwarn">WARNING: </span>The following steps seem to have changes that could be sent to Bugzilla,';
     html += ' but have not been submitted. You may wish to double-check them:</p><ul>' + subhtml + '</ul>';
     return html;
   },
@@ -86,20 +86,21 @@ var Summary = {
     if (sechtml == '')
       return sechtml;
 
-    var html = '<p>The following steps had security bugs, which you will need to check';
+    var html = '<p class="clear">The following steps had security bugs, which you will need to check';
     html += ' and resolve/comment manually:</p><ul>' + sechtml + '</ul>';
     return html;
   },
 
 
   makeButtonHTML: function summary_makeButtonHTML(prevLabel, nextLabel) {
-    var html = '<div class="grid-4">';
+    var html = '<nav class="prevNextButtons">';
+    html += '<div class="left">';
     html += '  <button type="button" class="summaryPrevButton">' + prevLabel + '</button>';
     html += '</div>';
-    html += '<div class="grid-4"></div>';
-    html += '<div class="grid-4 divRight">';
+    html += '<div class="right">';
     html += '  <button type="button" class="summaryNextButton">' + nextLabel + '</button>';
     html += '</div>'
+    html += '</nav>'
     return html;
   },
 

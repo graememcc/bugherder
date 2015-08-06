@@ -120,6 +120,10 @@ progress {
   border-top: 0px;
 }
 
+.changeset, .clear {
+  clear: both;
+}
+
 .csetTitle {
   font-weight: bold;
   /*font-family: Verdana, sans-serif;*/
@@ -175,6 +179,10 @@ progress {
     font-size: x-small;
     background-color: cornsilk;
     color: green;
+}
+
+.left {
+  float: left;
 }
 
 .backout {
@@ -258,6 +266,10 @@ progress {
 .modalForm button {
   font-family: 'Open Sans', sans-serif;
   font-size: large;
+}
+
+.right {
+  float: right;
 }
 
 .testsuite {

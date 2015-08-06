@@ -567,13 +567,14 @@ var Viewer = {
 
 
   makeButtonHTML: function viewer_makeButtonHTML(prevLabel, nextLabel) {
-    var html = '<div class="grid-4">';
+    var html = '<nav class="prevNextButtons">';
+    html += '<div class="left">';
     html += '  <button type="button" class="prevButton margin10">' + prevLabel + '</button>';
     html += '</div>';
-    html += '<div class="grid-4"></div>';
-    html += '<div class="grid-4 divRight">';
+    html += '<div class="right">';
     html += '  <button type="button" class="nextButton margin10">' + nextLabel + '</button>';
     html += '</div>'
+    html += '</nav>'
     return html;
   },
 
